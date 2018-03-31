@@ -4,7 +4,8 @@ module.exports = function (ctx) {
   return {
     // app plugins (/src/plugins)
     plugins: [
-      'i18n'
+      'i18n',
+      'logger'
     ],
     css: [
       'app.styl'
@@ -42,32 +43,32 @@ module.exports = function (ctx) {
       // port: 8080,
       open: true // opens browser window automatically
     },
-    // framework: 'all' --- includes everything; for dev only!
-    framework: {
-      components: [
-        'QLayout',
-        'QLayoutHeader',
-        'QLayoutDrawer',
-        'QPageContainer',
-        'QPage',
-        'QToolbar',
-        'QToolbarTitle',
-        'QBtn',
-        'QIcon',
-        'QList',
-        'QListHeader',
-        'QItem',
-        'QItemMain',
-        'QItemSide'
-      ],
-      directives: [
-        'Ripple'
-      ],
-      // Quasar plugins
-      plugins: [
-        'Notify'
-      ]
-    },
+    framework: 'all', // --- includes everything; for dev only!
+    // framework: {
+    //   components: [
+    //     'QLayout',
+    //     'QLayoutHeader',
+    //     'QLayoutDrawer',
+    //     'QPageContainer',
+    //     'QPage',
+    //     'QToolbar',
+    //     'QToolbarTitle',
+    //     'QBtn',
+    //     'QIcon',
+    //     'QList',
+    //     'QListHeader',
+    //     'QItem',
+    //     'QItemMain',
+    //     'QItemSide'
+    //   ],
+    //   directives: [
+    //     'Ripple'
+    //   ],
+    //   // Quasar plugins
+    //   plugins: [
+    //     'Notify'
+    //   ]
+    // },
     // animations: 'all' --- includes all animations
     animations: [
     ],
