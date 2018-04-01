@@ -1,5 +1,5 @@
 <template lang='pug'>
-q-layout(view='lHh Lpr lFf')
+q-layout(view='lhh Lpr lFf')
   q-page-container
     router-view
 </template>

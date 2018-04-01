@@ -5,6 +5,8 @@ export default [
     component: () => import('layouts/default'),
     children: [
       { path: '', component: () => import('pages/index') },
+      { path: 'get-in', component: () => import('pages/GetIn/index') },
+      { path: 'login', component: () => import('pages/LogIn/index') },
     ],
   },
 
