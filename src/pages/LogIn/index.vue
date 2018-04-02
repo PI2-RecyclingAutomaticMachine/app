@@ -23,17 +23,21 @@ q-page#login
         :after='[{icon: "ion-ios-locked-outline"}]'
         no-pass-toggle
         ).input
-    q-btn(
-      flat
-      rounded
-      no-ripple
-      no-caps
-      label='Entrar'
-      @click='$router.push("/login")'
-      ).login
+    div.actions
+      q-btn(
+        flat
+        rounded
+        no-ripple
+        no-caps
+        label='Entrar'
+        @click='logUser'
+        ).login
+      router-link(to='/get-in').go-back voltar
 </template>
 
 <script>
+import { mapActions } from 'vuex';
+
 export default {
   name: 'login',
   components: {
@@ -49,13 +53,16 @@ export default {
   },
   data() {
     return {
-      cpf: '',
-      password: '',
+      cpf: '055.728.891-64',
+      password: '123123',
     };
   },
   computed: {
   },
   methods: {
+    ...mapActions([
+      'login',
+    ]),
     formatCpf(cpf) {
       const { length } = cpf;
       if (length === 3 || length === 7) {
@@ -71,6 +78,22 @@ export default {
     makeLabelsWhite() {
       const labels = document.querySelectorAll('.q-if-label');
       labels.forEach((label) => { label.style.color = 'white'; });
+    },
+    async logUser() {
+      try {
+        await this.login({ cpf: this.cpf, password: this.password });
+        this.$q.notify({
+          type: 'positive',
+          message: 'LogIn efetuado com sucesso',
+        });
+        this.$router.push('/');
+      } catch (err) {
+        this.$log.error(err);
+        this.$q.notify({
+          type: 'negative',
+          message: err,
+        });
+      }
     },
   },
   mounted() {
@@ -107,11 +130,18 @@ export default {
       width 90%
       .input
         margin-top 15px
-    .login
-      background white
-      width 50vw
-      height 7vh
-      font-size 1.2rem
-      color #444444
-      font-weight 400
+    .actions
+      display flex
+      flex-direction column
+      align-items center
+      .login
+        background white
+        width 50vw
+        height 7vh
+        font-size 1.2rem
+        color #444444
+        font-weight 400
+      .go-back
+        padding-top 10px
+        color white
 </style>
