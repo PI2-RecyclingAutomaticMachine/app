@@ -4,9 +4,17 @@ export default [
     path: '/',
     component: () => import('layouts/default'),
     children: [
-      { path: '', component: () => import('pages/index') },
-      { path: 'get-in', component: () => import('pages/GetIn/index') },
-      { path: 'login', component: () => import('pages/LogIn/index') },
+      { path: '', redirect: () => '/get-in' },
+      { path: 'get-in', name: 'Entrar', component: () => import('pages/GetIn/index') },
+      { path: 'login', name: 'Log In', component: () => import('pages/LogIn/index') },
+    ],
+  },
+
+  {
+    path: '/signup',
+    component: () => import('layouts/go-back-header'),
+    children: [
+      { path: '', name: 'Cadastro', component: () => import('pages/SignUp/index') },
     ],
   },
 
