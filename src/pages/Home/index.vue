@@ -1,8 +1,11 @@
 <template lang="pug">
-q-page#home
+q-page#home.column.justify-center.items-center
+  qriously(value='user.cpf' :size='250')
 </template>
 
 <script>
+import { mapGetters } from 'vuex';
+
 export default {
   name: 'home',
   components: {
@@ -20,6 +23,9 @@ export default {
     return {};
   },
   computed: {
+    ...mapGetters([
+      'user',
+    ]),
   },
   methods: {
   },
