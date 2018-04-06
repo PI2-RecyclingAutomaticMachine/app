@@ -43,7 +43,7 @@ module.exports = function (ctx) {
       // port: 8080,
       open: true, // opens browser window automatically
       proxy: {
-        '/api': 'http://localhost:3000/'
+        '/api': 'http://35.196.52.216/'
       }
     },
     framework: 'all', // --- includes everything; for dev only!

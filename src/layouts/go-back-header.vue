@@ -1,6 +1,6 @@
 <template lang='pug'>
 q-layout(view='lhh Lpr lFf')
-  q-layout-header
+  q-layout-header.no-shadow
     q-toolbar.header
       q-btn(
         icon='arrow back'

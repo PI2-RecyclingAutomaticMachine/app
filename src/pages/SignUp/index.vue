@@ -86,11 +86,11 @@ export default {
   data() {
     return {
       submitted: false,
-      name: 'gabriel',
-      email: 'gabriel@gmail.com',
-      cpf: '055.728.891-64',
-      password: '123123',
-      confirmPassword: '123123',
+      name: '',
+      email: '',
+      cpf: '',
+      password: '',
+      confirmPassword: '',
       emailRegex: new RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/),
     };
   },

@@ -1,5 +1,5 @@
-export function getAuthHeaders() {
-  return null;
+export function getToken() {
+  return window.localStorage.getItem('id_token');
 }
 
 export function isCPFValid(cpf) {

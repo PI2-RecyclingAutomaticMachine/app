@@ -53,8 +53,8 @@ export default {
   },
   data() {
     return {
-      cpf: '055.728.891-64',
-      password: '123123',
+      cpf: '',
+      password: '',
     };
   },
   computed: {
@@ -86,7 +86,7 @@ export default {
           type: 'positive',
           message: 'LogIn efetuado com sucesso',
         });
-        this.$router.push('/');
+        this.$router.push('/home');
       } catch (err) {
         this.$log.error(err);
         this.$q.notify({

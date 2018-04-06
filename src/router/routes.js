@@ -18,6 +18,18 @@ export default [
     ],
   },
 
+  {
+    path: '/home',
+    component: () => import('layouts/home'),
+    meta: { auth: true },
+    children: [
+      { path: '', name: 'Início', component: () => import('pages/Home/index') },
+      { path: 'profile', name: 'Perfil', component: () => import('pages/Profile/index') },
+      { path: 'points', name: 'Pontuação', component: () => import('pages/Points/index') },
+      { path: 'others', name: 'Outros', component: () => import('pages/Others/index') },
+    ],
+  },
+
   { // Always leave this as last one
     path: '*',
     component: () => import('pages/404'),
