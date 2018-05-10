@@ -1,6 +1,6 @@
 <template lang="pug">
 q-page#home.column.justify-center.items-center
-  qriously(:value='user.cpf' :size='250')
+  qriously(:value='cpf' :size='250')
 </template>
 
 <script>
@@ -26,6 +26,9 @@ export default {
     ...mapGetters([
       'user',
     ]),
+    cpf() {
+      return this.user.cpf ? this.user.cpf : '';
+    },
   },
   methods: {
   },
