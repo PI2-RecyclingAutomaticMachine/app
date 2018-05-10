@@ -6,7 +6,8 @@ module.exports = function (ctx) {
     plugins: [
       'i18n',
       'logger',
-      'qr-code'
+      'qr-code',
+      'gravatar'
     ],
     css: [
       'app.styl'
