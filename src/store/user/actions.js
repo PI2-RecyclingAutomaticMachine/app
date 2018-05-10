@@ -29,10 +29,10 @@ export const checkIfLogged = async ({ commit, state }) => {
   commit('updateAuthentication');
   if (state.authenticated) {
     try {
-      const { data } = userApi.getCurrentUser();
-      commit('authenticate', data);
+      const { data } = await userApi.getUser(localStorage.getItem('id'));
+      commit('saveUser', data);
     } catch (err) {
-      this.$log.error(err);
+      Vue.$log.error(err);
       commit('unauthenticate');
     }
   }

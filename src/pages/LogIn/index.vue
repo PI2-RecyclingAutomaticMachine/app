@@ -91,7 +91,7 @@ export default {
         this.$log.error(err);
         this.$q.notify({
           type: 'negative',
-          message: err,
+          message: 'Ocorreu um erro. Por favor, tente novamente!',
         });
       }
     },
