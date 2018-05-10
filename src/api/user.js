@@ -1,8 +1,8 @@
 import api from '.';
 
 export default {
-  authenticateUser(email, password, socketId) {
-    return api.post('/user/authenticate', { email, password, socketId });
+  authenticateUser(cpf, password, socketId) {
+    return api.post('/user/authenticate', { cpf, password, socketId });
   },
   getUser(id) {
     return api.get(`/user/${id}`);
