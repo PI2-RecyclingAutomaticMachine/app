@@ -43,9 +43,14 @@ export const register = async (_, user) => userApi.setUser(user);
 export const retrieveUser = async (_, id) => userApi.getUser(id);
 
 export const updateUser = async ({ commit }, user) => {
-  commit('saveUser', user);
-
-  return userApi.updateUser(user);
+  try {
+    const { data } = await userApi.updateUser(user);
+    commit('saveUser', data);
+    return true;
+  } catch (err) {
+    Vue.$log.error(err);
+    throw err;
+  }
 };
 
 export const fetchUsers = async () => userApi.fetchUsers();
