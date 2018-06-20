@@ -82,10 +82,6 @@ export default {
     async logUser() {
       try {
         await this.login({ cpf: this.cpf, password: this.password });
-        this.$q.notify({
-          type: 'positive',
-          message: 'LogIn efetuado com sucesso',
-        });
         this.$router.push('/home');
       } catch (err) {
         this.$log.error(err);
