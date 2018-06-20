@@ -7,7 +7,8 @@ module.exports = function (ctx) {
       'i18n',
       'logger',
       'qr-code',
-      'gravatar'
+      'gravatar',
+      'moment',
     ],
     css: [
       'app.styl'
@@ -17,7 +18,7 @@ module.exports = function (ctx) {
       'material-icons',
       'ionicons',
       // 'mdi',
-      // 'fontawesome'
+      'fontawesome'
     ],
     supportIE: true,
     vendor: {

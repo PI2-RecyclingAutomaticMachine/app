@@ -13,6 +13,8 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+    "lodash": "^4.17.10",
+    "moment": "^2.22.2",
     "pug": "^2.0.3",
     "vue-gravatar": "^1.2.1",
     "vue-i18n": "^7.3.3",
