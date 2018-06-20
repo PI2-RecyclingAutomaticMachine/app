@@ -7,7 +7,7 @@ q-layout(view='lhh Lpr lFf')
   q-page-container.view
     router-view
   q-layout-footer.no-shadow
-    q-toolbar.footer
+    q-toolbar.footer.flex.row.justify-around
       q-btn(
         v-for='(route, index) in routes'
         :key='index'
@@ -35,25 +35,32 @@ export default {
           path: '/home',
         },
         {
+          label: 'Histórico',
+          icon: 'assignment',
+          path: '/home/history',
+        },
+        {
+          label: 'Estatísticas',
+          icon: 'assessment',
+          path: '/home/statistics',
+        },
+        {
           label: 'Perfil',
           icon: 'portrait',
           path: '/home/profile',
-        },
-        {
-          label: 'Pontuação',
-          icon: 'star border',
-          path: '/home/points',
-        },
-        {
-          label: 'Outros',
-          icon: 'more horiz',
-          path: '/home/others',
         },
       ],
     };
   },
 };
 </script>
+
+<style lang="stylus">
+.footer
+  .q-btn-inner
+    flex-direction column
+</style>
+
 
 <style lang='stylus' scoped>
 .header

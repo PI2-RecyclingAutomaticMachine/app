@@ -25,8 +25,8 @@ export default [
     children: [
       { path: '', name: 'Início', component: () => import('pages/Home/index') },
       { path: 'profile', name: 'Perfil', component: () => import('pages/Profile/index') },
-      { path: 'points', name: 'Pontuação', component: () => import('pages/Points/index') },
-      { path: 'others', name: 'Outros', component: () => import('pages/Others/index') },
+      { path: 'history', name: 'Histórico', component: () => import('pages/History/index') },
+      { path: 'statistics', name: 'Estatísticas', component: () => import('pages/Statistics/index') },
     ],
   },
 
