@@ -36,4 +36,5 @@ export default {
 #operation-history
   max-height 75vh
   overflow auto
+  width 90vw
 </style>

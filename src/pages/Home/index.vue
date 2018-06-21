@@ -6,7 +6,7 @@ q-page#home
       | garrafas e coletar pontos
     q-card(color='white').q-mt-md
       q-card-main
-        qriously(:value='String(user.cpf)' :size='230')
+        qriously(:value='String(user.cpf)' :size='250')
 </template>
 
 <script>
