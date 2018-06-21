@@ -2,8 +2,8 @@
 q-page#home
   current-points(:userName='user.name' :points='points')
   div.column.justify-center.items-center
-    span.message.text-center.q-mx-md Apresente esse código de barras na máquina para inserir
-      | garrafas e coletar pontos
+    span.message.text-center.q-mx-md
+      | Apresente esse código de barras na máquina para inserir garrafas e coletar pontos
     q-card(color='white').q-mt-md
       q-card-main
         qriously(:value='String(user.cpf)' :size='250')

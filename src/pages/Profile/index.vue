@@ -86,6 +86,7 @@ export default {
         this.$q.notify({
           type: 'negative',
           message: 'Reveja os campos',
+          position: 'top',
         });
       }
     },
@@ -98,12 +99,14 @@ export default {
         this.$q.notify({
           type: 'positive',
           message: 'Informações atualizadas com sucesso!',
+          position: 'top',
         });
         this.isEditing = !this.isEditing;
       } catch (error) {
         this.$q.notify({
           type: 'negative',
           message: 'Ocorreu um erro. Por favor, tente novamente!',
+          position: 'top',
         });
       }
     },
