@@ -54,7 +54,7 @@ export default {
   },
   mounted() {
     this.form = this.user;
-    this.$emit('editing', this.form);
+    this.$emit('edition', this.form);
   },
 };
 </script>

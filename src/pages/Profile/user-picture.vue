@@ -2,11 +2,13 @@
   div#user-picture.column.items-center
     div.user-picture
       div.user-circle.column.items-center.justify-center
-        v-gravatar(:email='user.email').gravatar
+        img(:src='gravatarUrl').gravatar
     span.q-mt-sm {{ user.cpf }}
 </template>
 
 <script>
+import md5 from 'md5';
+
 export default {
   name: 'user-picture',
   components: {
@@ -28,6 +30,11 @@ export default {
     return {};
   },
   computed: {
+    gravatarUrl() {
+      const email = this.user.email.toLocaleLowerCase().trim();
+      const hash = md5(email);
+      return `https://www.gravatar.com/avatar/${hash}`;
+    },
   },
   methods: {
   },

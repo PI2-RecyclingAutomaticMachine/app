@@ -7,7 +7,6 @@ module.exports = function (ctx) {
       'i18n',
       'logger',
       'qr-code',
-      'gravatar',
       'moment',
     ],
     css: [
