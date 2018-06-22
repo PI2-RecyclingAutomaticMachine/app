@@ -1,6 +1,6 @@
 {
   "name": "app",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Um app para reclicar e ganhar pontos",
   "productName": "Maquina Automática de Reciclagem",
   "cordovaId": "org.pi2.unb",

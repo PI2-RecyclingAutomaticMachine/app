@@ -143,7 +143,7 @@ export default {
     },
     displayErrorMessage(message) {
       this.$q.notify({
-        type: 'error',
+        type: 'negative',
         message,
       });
     },
